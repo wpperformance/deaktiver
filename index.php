@@ -9,7 +9,7 @@
  * Plugin Name:       Deaktiver
  * Plugin URI:        false
  * Description:       Disable native features of WordPress that you don't need.
- * Version:           0.0.1
+ * Version:           0.0.2
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            Faramaz patrick
