@@ -9,7 +9,7 @@
  * Plugin Name:       Deaktiver
  * Plugin URI:        false
  * Description:       Disable native features of WordPress that you don't need.
- * Version:           0.0.3
+ * Version:           1.0.0
  * Requires at least: 6.0
  * Requires PHP:      8.0
  * Author:            Faramaz patrick
@@ -32,7 +32,7 @@ if (! defined('WP_ENV')) {
     define('WP_ENV', 'development');
 }
 define('WPPERFORMANCE_DEAKTIVER', 'deaktiver');
-define('WPPERFORMANCE_DEAKTIVER_URI', plugin_dir_url(__DIR__) . WPPERFORMANCE_DEAKTIVER);
+define('WPPERFORMANCE_DEAKTIVER_URI', plugin_dir_url(__FILE__));
 
 /**
  * admin options page

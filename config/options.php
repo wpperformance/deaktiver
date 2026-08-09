@@ -53,6 +53,10 @@ return [
         'label' => __('Comments', 'deaktiver'),
         'description' => __('Disable comments', 'deaktiver'),
     ],
+    'posts' => [
+        'label' => __('Posts', 'deaktiver'),
+        'description' => __('Disable posts, categories, tags and blog archives', 'deaktiver'),
+    ],
     'rest_user' => [
         'label' => __('REST User', 'deaktiver'),
         'description' => __('Disable REST User', 'deaktiver'),

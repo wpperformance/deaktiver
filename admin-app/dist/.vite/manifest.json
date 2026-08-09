@@ -1,11 +1,12 @@
 {
-	"src/main.js": {
-		"file": "assets/main-DtP2hhUK.js",
-		"isEntry": true,
-		"src": "src/main.js"
-	},
-	"style.css": {
-		"file": "assets/style-h-xrWVkU.css",
-		"src": "style.css"
-	}
+  "src/main.js": {
+    "file": "assets/main-BaOY6ijr.js",
+    "name": "main",
+    "src": "src/main.js",
+    "isEntry": true
+  },
+  "style.css": {
+    "file": "assets/style-z0x_-cxX.css",
+    "src": "style.css"
+  }
 }
