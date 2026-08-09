@@ -69,7 +69,7 @@ class DeaktiveComments extends DeaktiveBase
         if (! function_exists('is_plugin_active_for_network')) {
             require_once ABSPATH . '/wp-admin/includes/plugin.php';
         }
-        if (is_plugin_active_for_network('deaktiver/index.php') &&
+        if (is_plugin_active_for_network('deaktiver/deaktiver.php') &&
            is_user_logged_in()) {
 
             // all
