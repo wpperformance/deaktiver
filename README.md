@@ -40,7 +40,7 @@ return [
 
 ## Changelog
 
-### 1.0.0
+### 1.5.0
 
 - **Posts / blog**: new `posts` option to disable the native blog surface
   - Admin: hide Posts menu, block post/category/tag screens, remove Quick Draft and “New Post” admin bar item
