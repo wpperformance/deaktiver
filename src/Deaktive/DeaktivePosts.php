@@ -134,16 +134,32 @@ class DeaktivePosts extends DeaktiveBase
 
         remove_menu_page('edit.php');
 
-        $post_type = isset($_GET['post_type']) ? sanitize_key(wp_unslash($_GET['post_type'])) : 'post';
+        $post_type = 'post';
+        if (isset($_GET['post_type'])) {
+            $post_type = sanitize_key(wp_unslash($_GET['post_type']));
+        } elseif (isset($_POST['post_type'])) {
+            $post_type = sanitize_key(wp_unslash($_POST['post_type']));
+        }
+
         $taxonomy = isset($_GET['taxonomy']) ? sanitize_key(wp_unslash($_GET['taxonomy'])) : '';
 
         $post_screens = ['edit.php', 'post-new.php', 'post.php'];
         if (in_array($pagenow, $post_screens, true) && ($post_type === '' || $post_type === 'post')) {
-            // post.php may edit other types via post ID; resolve from the post when needed.
-            if ($pagenow === 'post.php' && isset($_GET['post'])) {
-                $edited_type = get_post_type((int) $_GET['post']);
-                if ($edited_type && $edited_type !== 'post') {
-                    return;
+            if ($pagenow === 'post.php') {
+                $edited_id = 0;
+                if (isset($_GET['post'])) {
+                    $edited_id = (int) $_GET['post'];
+                } elseif (isset($_POST['post_ID'])) {
+                    $edited_id = (int) $_POST['post_ID'];
+                } elseif (isset($_REQUEST['post'])) {
+                    $edited_id = (int) $_REQUEST['post'];
+                }
+
+                if ($edited_id > 0) {
+                    $edited_type = get_post_type($edited_id);
+                    if ($edited_type && $edited_type !== 'post') {
+                        return;
+                    }
                 }
             }
 

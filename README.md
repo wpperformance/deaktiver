@@ -40,6 +40,10 @@ return [
 
 ## Changelog
 
+### 1.5.1
+
+- **Posts / blog**: fix admin block on `post.php` save for custom post types — resolve the edited post ID from GET/POST when `post_type` is absent from the query string
+
 ### 1.5.0
 
 - **Posts / blog**: new `posts` option to disable the native blog surface
