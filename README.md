@@ -40,6 +40,10 @@ return [
 
 ## Changelog
 
+### 1.5.2
+
+- **Posts / blog**: extract admin post type resolution (`resolve_admin_post_type()`) and add unit tests for CPT save vs native post block cases. Same allow/block behavior as 1.5.1.
+
 ### 1.5.1
 
 - **Posts / blog**: fix CPT save on `post.php` when `posts` is disabled — no longer 403 custom post types. Classic editor POSTs to `post.php` without a query string; resolve `post_type` from GET, then POST, then `get_post_type()` of the edited ID. Native posts, categories and tags stay blocked.
