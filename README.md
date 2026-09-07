@@ -42,7 +42,7 @@ return [
 
 ### 1.5.1
 
-- **Posts / blog**: fix admin block on `post.php` save for custom post types — resolve the edited post ID from GET/POST when `post_type` is absent from the query string
+- **Posts / blog**: fix CPT save on `post.php` when `posts` is disabled — no longer 403 custom post types. Classic editor POSTs to `post.php` without a query string; resolve `post_type` from GET, then POST, then `get_post_type()` of the edited ID. Native posts, categories and tags stay blocked.
 
 ### 1.5.0
 
